@@ -8,7 +8,7 @@ public static class HelperUtilities
     {
         if (stringToCheck == "")
         {
-            Debug.LogError(fieldName + " is empty and must be assigned a value in " + thisObject.name, thisObject);
+            Debug.LogWarning(fieldName + " is empty and must be assigned a value in " + thisObject.name, thisObject);
             return true;
         }
         return false;
@@ -22,7 +22,7 @@ public static class HelperUtilities
         {
             if (item == null)
             {
-                Debug.LogError(fieldName + " has null value in object " + thisObject.name, thisObject);
+                Debug.LogWarning(fieldName + " has null value in object " + thisObject.name, thisObject);
                 error =  true;
             }
             else
@@ -32,7 +32,7 @@ public static class HelperUtilities
         }
         if (count == 0)
         {
-            Debug.LogError(fieldName + " has no values in object " + thisObject.name, thisObject);
+            Debug.LogWarning(fieldName + " has no values in object " + thisObject.name, thisObject);
             error = true;
         }
         return error;

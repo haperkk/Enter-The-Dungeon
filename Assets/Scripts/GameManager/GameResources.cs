@@ -27,4 +27,10 @@ public class GameResources : MonoBehaviour
     [Tooltip("Populate with the dungeon RoomNodeTypeListSO")]
     #endregion
     public RoomNodeTypeListSO roomNodeTypeList;
+    
+    public Material dimmedMaterial;
+    
+    //This is used to reference the current player between scenes
+    public CurrentPlayerSO currentPlayer;
+    
 }

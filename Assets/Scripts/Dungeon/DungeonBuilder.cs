@@ -10,7 +10,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
     private Dictionary<string, RoomTemplateSO> roomTemplateDictionary = new Dictionary<string, RoomTemplateSO>();
     private List<RoomTemplateSO> roomTemplateList;
     private RoomNodeTypeListSO roomNodeTypeList;
-    private bool dungeonBuildSuccessful = false;
+    private bool dungeonBuildSuccessfully = false;
     
     protected override void Awake()
     {
@@ -26,36 +26,37 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         roomNodeTypeList = GameResources.Instance.roomNodeTypeList;
     }
 
-    public void GenerateDungeon(DungeonLevelSO currentDungeonLevel)
+    public bool GenerateDungeon(DungeonLevelSO currentDungeonLevel)
     {
         roomTemplateList = currentDungeonLevel.roomTemplateList;
         
          LoadRoomTemplateIntoDictionary();
 
          //choose a random graph to build
-         dungeonBuildSuccessful = false;
+         dungeonBuildSuccessfully = false;
          int dungeonBuildAttempt = 0;
-         while (!dungeonBuildSuccessful && dungeonBuildAttempt < Settings.maxDungeonBuildAttempts)
+         while (!dungeonBuildSuccessfully && dungeonBuildAttempt < Settings.maxDungeonBuildAttempts)
          {
              dungeonBuildAttempt++;
              RoomNodeGraphSO roomNodeGraph = SelectRandomRoomNodeGraph(currentDungeonLevel.roomNodeGraphList);
              
              //use the graph to rebuild again and again until it is successful
              int dungeonRebuildAttemptsForNodeGraph = 0;
-             dungeonBuildSuccessful = false;
+             dungeonBuildSuccessfully = false;
              
-             while (!dungeonBuildSuccessful && dungeonRebuildAttemptsForNodeGraph < Settings.maxDungeonRebuildAttemptsForRoomGraph)
+             while (!dungeonBuildSuccessfully && dungeonRebuildAttemptsForNodeGraph < Settings.maxDungeonRebuildAttemptsForRoomGraph)
              {
                  dungeonRebuildAttemptsForNodeGraph++;
                  ClearDungeon();
 
-                 dungeonBuildSuccessful = AttempToBuildRandomDungeon(roomNodeGraph);
+                 dungeonBuildSuccessfully = AttempToBuildRandomDungeon(roomNodeGraph);
              }
-             if (dungeonBuildSuccessful)
+             if (dungeonBuildSuccessfully)
              {
                  InstantiateRoomGameObjects();
              }
          }
+         return dungeonBuildSuccessfully;
     }
 
     private void InstantiateRoomGameObjects()
@@ -411,6 +412,8 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         {
             room.parentRoomID = "";
             room.isPreviouslyVisited = true;
+            
+            GameManager.Instance.SetCurrentRoom(room);
         }
         else
         {

@@ -11,22 +11,6 @@ PrefabInstance:
       propertyPath: movementDetails
       value: 
       objectReference: {fileID: 11400000, guid: 85d07ea7402107949b231a6f19cc421f, type: 2}
-    - target: {fileID: 359304141399661633, guid: ab7c1a2b4ba17db4f80d93a38cbf8d79, type: 3}
-      propertyPath: m_Size.x
-      value: 1.125
-      objectReference: {fileID: 0}
-    - target: {fileID: 359304141399661633, guid: ab7c1a2b4ba17db4f80d93a38cbf8d79, type: 3}
-      propertyPath: m_Size.y
-      value: 0.6875
-      objectReference: {fileID: 0}
-    - target: {fileID: 359304141399661633, guid: ab7c1a2b4ba17db4f80d93a38cbf8d79, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: abbe40c4d6a803f42a7c4f53404a484d, type: 3}
-    - target: {fileID: 359304141399661633, guid: ab7c1a2b4ba17db4f80d93a38cbf8d79, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 359304141399661694, guid: ab7c1a2b4ba17db4f80d93a38cbf8d79, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
       value: 0.18444446
@@ -75,10 +59,6 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.74369794
       objectReference: {fileID: 0}
-    - target: {fileID: 359304143480262402, guid: ab7c1a2b4ba17db4f80d93a38cbf8d79, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: e87ce176a15556c459b355908992b930, type: 2}
     - target: {fileID: 359304143480262460, guid: ab7c1a2b4ba17db4f80d93a38cbf8d79, type: 3}
       propertyPath: m_Name
       value: TheGeneral

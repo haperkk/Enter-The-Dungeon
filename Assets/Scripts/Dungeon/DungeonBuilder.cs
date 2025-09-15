@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,15 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         base.Awake();
 
         LoadRoomNodeTypeList();
-        
+    }
+
+    private void OnEnable()
+    {
+        GameResources.Instance.dimmedMaterial.SetFloat("Alpha_Slider", 0f);
+    }
+
+    private void OnDisable()
+    {
         GameResources.Instance.dimmedMaterial.SetFloat("Alpha_Slider", 1f);
     }
 

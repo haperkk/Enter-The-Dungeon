@@ -4,15 +4,16 @@ using UnityEngine;
 
 public static class Settings
 {
+    public const float pixelsPerUnit = 16f;
+    public const float tileSizePixels = 16f;
+    
     #region DUNGEON BUILD SETTINGS
-
     public const int maxDungeonRebuildAttemptsForRoomGraph = 1000;
     public const int maxDungeonBuildAttempts = 10;
-
     #endregion
     
     #region ROOM SETTINGS
-
+    public const float fadeInTime = 0.5f;
     // max number of child corridors a room can have
     public const int maxChildCorridors = 3;
 
@@ -32,5 +33,23 @@ public static class Settings
     public static int rollRight = Animator.StringToHash("rollRight");
     public static int rollLeft = Animator.StringToHash("rollLeft");
     public static int rollDown = Animator.StringToHash("rollDown");
+    
+    // animator params
+    public static int open = Animator.StringToHash("open");
+
+    public static float baseSpeedForPlayerAnimations = 8f;
+
+    #endregion
+
+    #region GAMEOBJECT TAGS
+
+    public const string playerTag = "Player";
+    //todo: tags uppercase or lowercase?
+    public const string playerWeapon = "playerWeapon";
+    
+    #region FIRING CONTROL
+    public const float useAimAngleDistance = 3.5f; // if the target distance is less than this then the aim angle will be used (calculated from player), else the weapon aim angle will be used (calculated from the weapon). 
+    #endregion
+
     #endregion
 }

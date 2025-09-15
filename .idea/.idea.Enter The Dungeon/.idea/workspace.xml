@@ -6,23 +6,156 @@
   <component name="ChangeListManager">
     <list default="true" id="f2889408-6354-47b6-9daa-99d1619cf4fc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Enter The Dungeon/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Enter The Dungeon/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleDown.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleDown.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleLeft.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleLeft.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleRight.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleRight.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleUp.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleUp.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CourseAssets/Textures/Sprite Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CourseAssets/Textures/Sprite Atlas.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CourseAssets/Materials/Dungeon/DungeonLightShader_Dimmed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CourseAssets/Materials/Dungeon/DungeonLightShader_Dimmed.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CourseAssets/Materials/Dungeon/DungeonLightShader_Variable.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CourseAssets/Materials/Dungeon/DungeonLightShader_Variable.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CourseAssets/Shaders/DungeonLightShader_Variable.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CourseAssets/Shaders/DungeonLightShader_Variable.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CourseAssets/Shaders/Old_DungeonLightShader_Variable.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CourseAssets/Shaders/Old_DungeonLightShader_Variable.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/BossRoom_Catacombs_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/BossRoom_Catacombs_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/BossRoom_Catacombs_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/BossRoom_Catacombs_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/ChestRoom_Catacombs_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/ChestRoom_Catacombs_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/ChestRoom_Catacombs_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/ChestRoom_Catacombs_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/ChestRoom_Catacombs_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/ChestRoom_Catacombs_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/ChestRoom_Catacombs_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/ChestRoom_Catacombs_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorEW_Catacombs_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorEW_Catacombs_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorEW_Catacombs_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorEW_Catacombs_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorEW_Catacombs_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorEW_Catacombs_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorEW_Catacombs_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorEW_Catacombs_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorEW_Catacombs_5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorEW_Catacombs_5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorNS_Catacombs_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorNS_Catacombs_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorNS_Catacombs_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorNS_Catacombs_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorNS_Catacombs_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorNS_Catacombs_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorNS_Catacombs_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorNS_Catacombs_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorNS_Catacombs_5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/CorridorNS_Catacombs_5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/Entrance_Catacombs_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/Entrance_Catacombs_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/Entrance_Catacombs_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/Entrance_Catacombs_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/Entrance_Catacombs_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/Entrance_Catacombs_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/LargeRoom_Catacombs_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/LargeRoom_Catacombs_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/LargeRoom_Catacombs_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/LargeRoom_Catacombs_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/LargeRoom_Catacombs_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/LargeRoom_Catacombs_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/LargeRoom_Catacombs_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/LargeRoom_Catacombs_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/LargeRoom_Catacombs_5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/LargeRoom_Catacombs_5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/MediumRoom_Catacombs_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/MediumRoom_Catacombs_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/MediumRoom_Catacombs_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/MediumRoom_Catacombs_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/MediumRoom_Catacombs_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/MediumRoom_Catacombs_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/MediumRoom_Catacombs_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/MediumRoom_Catacombs_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/MediumRoom_Catacombs_5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/MediumRoom_Catacombs_5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/SmallRoom_Catacombs_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/SmallRoom_Catacombs_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/SmallRoom_Catacombs_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/SmallRoom_Catacombs_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/SmallRoom_Catacombs_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/SmallRoom_Catacombs_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/SmallRoom_Catacombs_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/SmallRoom_Catacombs_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/SmallRoom_Catacombs_5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Catacombs/SmallRoom_Catacombs_5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/CorridorEW_MyRooms_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/CorridorEW_MyRooms_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/CorridorNS_MyRooms_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/CorridorNS_MyRooms_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/MediumRoom_MyRooms_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/MyRooms/MediumRoom_MyRooms_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/BossRoom_Sorcery_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/BossRoom_Sorcery_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/BossRoom_Sorcery_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/BossRoom_Sorcery_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/ChestRoom_Sorcery_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/ChestRoom_Sorcery_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/ChestRoom_Sorcery_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/ChestRoom_Sorcery_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/ChestRoom_Sorcery_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/ChestRoom_Sorcery_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/ChestRoom_Sorcery_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/ChestRoom_Sorcery_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorEW_Sorcery_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorEW_Sorcery_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorEW_Sorcery_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorEW_Sorcery_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorEW_Sorcery_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorEW_Sorcery_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorEW_Sorcery_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorEW_Sorcery_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorEW_Sorcery_5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorEW_Sorcery_5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorNS_Sorcery_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorNS_Sorcery_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorNS_Sorcery_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorNS_Sorcery_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorNS_Sorcery_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorNS_Sorcery_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorNS_Sorcery_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorNS_Sorcery_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorNS_Sorcery_5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/CorridorNS_Sorcery_5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/Entrance_Sorcery_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/Entrance_Sorcery_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/Entrance_Sorcery_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/Entrance_Sorcery_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/Entrance_Sorcery_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/Entrance_Sorcery_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/LargeRoom_Sorcery_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/LargeRoom_Sorcery_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/LargeRoom_Sorcery_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/LargeRoom_Sorcery_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/LargeRoom_Sorcery_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/LargeRoom_Sorcery_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/LargeRoom_Sorcery_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/LargeRoom_Sorcery_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/LargeRoom_Sorcery_5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/LargeRoom_Sorcery_5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/MediumRoom_Sorcery_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/MediumRoom_Sorcery_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/MediumRoom_Sorcery_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/MediumRoom_Sorcery_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/MediumRoom_Sorcery_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/MediumRoom_Sorcery_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/MediumRoom_Sorcery_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/MediumRoom_Sorcery_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/MediumRoom_Sorcery_5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/MediumRoom_Sorcery_5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/SmallRoom_Sorcery_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/SmallRoom_Sorcery_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/SmallRoom_Sorcery_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/SmallRoom_Sorcery_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/SmallRoom_Sorcery_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/SmallRoom_Sorcery_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/SmallRoom_Sorcery_4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/SmallRoom_Sorcery_4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/SmallRoom_Sorcery_5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Dungeon/Rooms/Sorcery/SmallRoom_Sorcery_5.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameResources/Resources/GameResources.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GameResources/Resources/GameResources.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/TheThief/TheThief.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/TheThief/TheThief.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player/The General/TheGeneral.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player/The General/TheGeneral.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_BossRoom_Catacombs_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_BossRoom_Catacombs_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_BossRoom_Catacombs_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_BossRoom_Catacombs_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_ChestRoom_Catacombs_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_ChestRoom_Catacombs_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_ChestRoom_Catacombs_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_ChestRoom_Catacombs_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_ChestRoom_Catacombs_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_ChestRoom_Catacombs_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_ChestRoom_Catacombs_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_ChestRoom_Catacombs_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_Entrance_Catacombs_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_Entrance_Catacombs_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_Entrance_Catacombs_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_Entrance_Catacombs_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_Entrance_Catacombs_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_Entrance_Catacombs_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_LargeRoom_Catacombs_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_LargeRoom_Catacombs_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_LargeRoom_Catacombs_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_LargeRoom_Catacombs_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_LargeRoom_Catacombs_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_LargeRoom_Catacombs_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_LargeRoom_Catacombs_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_LargeRoom_Catacombs_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_LargeRoom_Catacombs_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_LargeRoom_Catacombs_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_MediumRoom_Catacombs_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_MediumRoom_Catacombs_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_MediumRoom_Catacombs_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_MediumRoom_Catacombs_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_MediumRoom_Catacombs_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_MediumRoom_Catacombs_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_MediumRoom_Catacombs_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_MediumRoom_Catacombs_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_MediumRoom_Catacombs_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_MediumRoom_Catacombs_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_SmallRoom_Catacombs_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_SmallRoom_Catacombs_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_SmallRoom_Catacombs_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_SmallRoom_Catacombs_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_SmallRoom_Catacombs_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_SmallRoom_Catacombs_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_SmallRoom_Catacombs_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_SmallRoom_Catacombs_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_SmallRoom_Catacombs_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_SmallRoom_Catacombs_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_MediumRoom_MyRooms_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/MyRooms/Room_MediumRoom_MyRooms_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_BossRoom_Sorcery_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_BossRoom_Sorcery_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_BossRoom_Sorcery_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_BossRoom_Sorcery_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_ChestRoom_Sorcery_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_ChestRoom_Sorcery_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_ChestRoom_Sorcery_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_ChestRoom_Sorcery_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_ChestRoom_Sorcery_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_ChestRoom_Sorcery_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_ChestRoom_Sorcery_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_ChestRoom_Sorcery_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_Entrance_Sorcery_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_Entrance_Sorcery_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_Entrance_Sorcery_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_Entrance_Sorcery_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_Entrance_Sorcery_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_Entrance_Sorcery_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_LargeRoom_Sorcery_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_LargeRoom_Sorcery_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_LargeRoom_Sorcery_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_LargeRoom_Sorcery_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_LargeRoom_Sorcery_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_LargeRoom_Sorcery_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_LargeRoom_Sorcery_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_LargeRoom_Sorcery_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_LargeRoom_Sorcery_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_LargeRoom_Sorcery_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_MediumRoom_Sorcery_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_MediumRoom_Sorcery_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_MediumRoom_Sorcery_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_MediumRoom_Sorcery_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_MediumRoom_Sorcery_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_MediumRoom_Sorcery_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_MediumRoom_Sorcery_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_MediumRoom_Sorcery_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_MediumRoom_Sorcery_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_MediumRoom_Sorcery_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_SmallRoom_Sorcery_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_SmallRoom_Sorcery_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_SmallRoom_Sorcery_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_SmallRoom_Sorcery_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_SmallRoom_Sorcery_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_SmallRoom_Sorcery_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_SmallRoom_Sorcery_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_SmallRoom_Sorcery_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_SmallRoom_Sorcery_5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_SmallRoom_Sorcery_5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/CurrentPlayer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/CurrentPlayer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/Movement/MovementDetails_Player_TheGeneral.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/Movement/MovementDetails_Player_TheGeneral.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetail_TheGeneral.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetail_TheGeneral.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dungeon/DungeonBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dungeon/DungeonBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enums/Enums.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enums/Enums.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dungeon/InstantiatedRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dungeon/InstantiatedRoom.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameResources.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager/GameResources.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CurrentPlayerSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CurrentPlayerSO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerDetailsSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerDetailsSO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/HelperUtilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/HelperUtilities.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/AimWeapon.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/AimWeapon.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/AimWeaponEvent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/AimWeaponEvent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +180,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/531e906a5d9447dca62c95ab61ff1c26143c00/63/f57d65b6/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/531e906a5d9447dca62c95ab61ff1c26143c00/7d/213f958c/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/Door.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/DungeonBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/DungeonLevelSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dungeon/InstantiatedRoom.cs" root0="FORCE_HIGHLIGHTING" />
@@ -54,10 +188,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/Settings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Misc/SingletonMonobehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/StaticEvents/StaticEventHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/HelperUtilities.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/AimWeapon.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/AimWeaponEvent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.7.9/Runtime/Behaviours/CinemachineTargetGroup.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -82,7 +217,8 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.smartKeys_rider&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;独立播放器.Start Unity.executor&quot;: &quot;Run&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
@@ -160,6 +296,10 @@
       <workItem from="1757682251074" duration="2493000" />
       <workItem from="1757746247398" duration="19906000" />
       <workItem from="1757831552882" duration="13730000" />
+      <workItem from="1757903459697" duration="8340000" />
+      <workItem from="1757919398541" duration="515000" />
+      <workItem from="1757920207300" duration="10800000" />
+      <workItem from="1757942562425" duration="3750000" />
     </task>
     <servers />
   </component>

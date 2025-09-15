@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Player))]
+[DisallowMultipleComponent]
 public class PlayerControl : MonoBehaviour
 {
-    [SerializeField] private Transform weaponShootPosition;
     [SerializeField] private MovementDetailsSO movementDetails;
     
     private Player player;
+    private int currentWeaponIndex = 1;
     private float moveSpeed;
     
     // player roll
@@ -26,6 +28,36 @@ public class PlayerControl : MonoBehaviour
     private void Start()
     {
         waitForFixedUpdate = new WaitForFixedUpdate();
+        
+        SetStartingWeapon();
+        
+        SetPlayerAnimationSpeed();
+    }
+
+    private void SetStartingWeapon()
+    {
+        int index = 1;
+        foreach (Weapon weapon in player.weaponList)
+        {
+            if (weapon.weaponDetails == player.playerDetails.startingWeapon)
+            {
+                SetWeaponByIndex(index);
+                break;
+            }
+        }
+    }
+
+    private void SetWeaponByIndex(int index)
+    {
+        if (index - 1 < player.weaponList.Count)
+        {
+            currentWeaponIndex = index;
+            player.SetActiveWeaponEvent.CallSetActiveWeaponEvent(player.weaponList[index - 1]);
+        }
+        else
+        {
+            Debug.LogError("PlayerControl: SetWeaponByIndex: Index " + index + " is out of range of the weapon list.");
+        }
     }
 
     private void Update()
@@ -37,6 +69,11 @@ public class PlayerControl : MonoBehaviour
         WeaponInput();
 
         PlayerRollCooldownTimer();
+    }
+    
+    private void SetPlayerAnimationSpeed()
+    {
+        player.animator.speed = moveSpeed / Settings.baseSpeedForPlayerAnimations;
     }
 
     private void PlayerRollCooldownTimer()
@@ -116,7 +153,7 @@ public class PlayerControl : MonoBehaviour
         Vector3 mouseWorldPosition = HelperUtilities.GetMouseWorldPosition();
 
         // Calculate direction vector of mouse cursor from weapon shoot position
-        weaponDirection = (mouseWorldPosition - weaponShootPosition.position);
+        weaponDirection = (mouseWorldPosition - player.activeWeapon.GetShootPosition());
 
         // Calculate direction vector of mouse cursor from player transform position
         Vector3 playerDirection = (mouseWorldPosition - transform.position);

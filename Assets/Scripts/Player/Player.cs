@@ -16,6 +16,8 @@ using UnityEngine.Rendering;
 [RequireComponent(typeof(MovementByVelocity))]
 [RequireComponent(typeof(MovementToPositionEvent))]
 [RequireComponent(typeof(MoveToPosition))]
+[RequireComponent(typeof(SetActiveWeaponEvent))]
+[RequireComponent(typeof(ActiveWeapon))]
 
 [RequireComponent(typeof(SortingGroup))]
 [RequireComponent(typeof(SpriteRenderer))]
@@ -29,12 +31,15 @@ public class Player : MonoBehaviour
 {
     [HideInInspector] public PlayerDetailsSO playerDetails;
     [HideInInspector] public Health health;
+    [HideInInspector] public ActiveWeapon activeWeapon;
     
+    [HideInInspector] public SetActiveWeaponEvent SetActiveWeaponEvent;
     [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
     [HideInInspector] public MovementByVelocityEvent movementByVelocityEvent;
     [HideInInspector] public IdleEvent idleEvent;
     [HideInInspector] public AimWeaponEvent aimWeaponEvent;
     
+    public List<Weapon> weaponList = new List<Weapon>();
     
     [HideInInspector] public SpriteRenderer spriteRenderer;
     [HideInInspector] public Animator animator;
@@ -42,7 +47,9 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         health = GetComponent<Health>();
+        activeWeapon = GetComponent<ActiveWeapon>();
         
+        SetActiveWeaponEvent = GetComponent<SetActiveWeaponEvent>();
         movementToPositionEvent = GetComponent<MovementToPositionEvent>();
         movementByVelocityEvent = GetComponent<MovementByVelocityEvent>();
         idleEvent = GetComponent<IdleEvent>();
@@ -55,7 +62,40 @@ public class Player : MonoBehaviour
     public void Initialize(PlayerDetailsSO playerDetails)
     {
         this.playerDetails = playerDetails;
+        
+        CreatePlayerStartingWeapons();
+        
         SetPlayerHealth();
+    }
+
+    private void CreatePlayerStartingWeapons()
+    {
+        weaponList.Clear();
+
+        foreach (WeaponDetailsSO weaponDetails in playerDetails.startingWeaponList)
+        {
+            AddWeaponToPlayer(weaponDetails);
+        }
+    }
+
+    private Weapon AddWeaponToPlayer(WeaponDetailsSO weaponDetails)
+    {
+        Weapon weapon = new Weapon
+        {
+            weaponDetails = weaponDetails,
+            weaponListPosition = weaponList.Count,
+            weaponClipRemainingAmmo = weaponDetails.weaponClipAmmoCapacity,
+            weaponRemainingAmmo = weaponDetails.weaponClipAmmoCapacity,
+            isWeaponReloading = false
+        };
+
+        weaponList.Add(weapon);
+        
+        //todo: so the first weapon is 1? not 0?
+        weapon.weaponListPosition = weaponList.Count;
+        SetActiveWeaponEvent.CallSetActiveWeaponEvent(weapon);
+
+        return weapon;
     }
 
     private void SetPlayerHealth()

@@ -24,6 +24,21 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         InstantiatePlayer();
     }
 
+    private void OnEnable()
+    {
+        StaticEventHandler.OnRoomChanged += StaticEventHandler_OnRoomChanged;
+    }
+
+    private void OnDisable()
+    {
+        StaticEventHandler.OnRoomChanged -= StaticEventHandler_OnRoomChanged;
+    }
+
+    private void StaticEventHandler_OnRoomChanged(RoomChangedEventArgs roomChangedEventArgs)
+    {
+        SetCurrentRoom(roomChangedEventArgs.room);
+    }
+    
     private void InstantiatePlayer()
     {
         GameObject playerGameObject = Instantiate(playerDetails.playerPrefab);
@@ -73,6 +88,8 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             Debug.Log("Dungeon could not be built from specified rooms and graphs.");
             return;
         }
+        
+        StaticEventHandler.CallRoomChangedEvent(currentRoom);
         
         //set player roughly in the center of the dungeon
         player.gameObject.transform.position = new Vector3(currentRoom.lowerBounds.x + (currentRoom.upperBounds.x - currentRoom.lowerBounds.x) / 2f,

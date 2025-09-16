@@ -48,3 +48,6 @@ MonoBehaviour:
   litMaterial: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   variableLitShader: {fileID: -6465566751694194690, guid: ceaa7ca7bc74c8548be9c4eb61bd6e8e, type: 3}
   currentPlayer: {fileID: 11400000, guid: 4efb025dbc81acd4cad5958c47484ef1, type: 2}
+  soundsMasterMixerGroup: {fileID: -4734643798044506327, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
+  doorOpenCloseSoundEffect: {fileID: 11400000, guid: 4f50da51a1063c947a3cc423f31637c6, type: 2}
+  ammoIconPrefab: {fileID: 1393089498759673575, guid: 9dcb96a2d78aebc41a0fbf9d0d91bee1, type: 3}

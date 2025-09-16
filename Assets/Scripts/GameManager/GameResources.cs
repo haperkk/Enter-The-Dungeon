@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class GameResources : MonoBehaviour
 {
@@ -35,6 +36,13 @@ public class GameResources : MonoBehaviour
     //This is used to reference the current player between scenes
     public CurrentPlayerSO currentPlayer;
     
+    //audio
+    public AudioMixerGroup soundsMasterMixerGroup; 
+    public SoundEffectSO doorOpenCloseSoundEffect;
+    
+    //UI
+    public GameObject ammoIconPrefab;
+    
     
         #region Validation
 #if UNITY_EDITOR
@@ -46,8 +54,8 @@ public class GameResources : MonoBehaviour
         // HelperUtilities.ValidateCheckEnumerableValues(this, nameof(playerDetailsList), playerDetailsList);
         HelperUtilities.ValidateCheckNullValue(this, nameof(currentPlayer), currentPlayer);
         // HelperUtilities.ValidateCheckNullValue(this, nameof(mainMenuMusic), mainMenuMusic);
-        // HelperUtilities.ValidateCheckNullValue(this, nameof(soundsMasterMixerGroup), soundsMasterMixerGroup);
-        // HelperUtilities.ValidateCheckNullValue(this, nameof(doorOpenCloseSoundEffect), doorOpenCloseSoundEffect);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(soundsMasterMixerGroup), soundsMasterMixerGroup);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(doorOpenCloseSoundEffect), doorOpenCloseSoundEffect);
         // HelperUtilities.ValidateCheckNullValue(this, nameof(tableFlip), tableFlip);
         // HelperUtilities.ValidateCheckNullValue(this, nameof(chestOpen), chestOpen);
         // HelperUtilities.ValidateCheckNullValue(this, nameof(healthPickup), healthPickup);
@@ -64,7 +72,7 @@ public class GameResources : MonoBehaviour
         // HelperUtilities.ValidateCheckNullValue(this, nameof(musicLowSnapshot), musicLowSnapshot);
         // HelperUtilities.ValidateCheckNullValue(this, nameof(musicOffSnapshot), musicOffSnapshot); 
         // HelperUtilities.ValidateCheckNullValue(this, nameof(heartPrefab), heartPrefab);
-        // HelperUtilities.ValidateCheckNullValue(this, nameof(ammoIconPrefab), ammoIconPrefab);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(ammoIconPrefab), ammoIconPrefab);
         // HelperUtilities.ValidateCheckNullValue(this, nameof(scorePrefab), scorePrefab);
         // HelperUtilities.ValidateCheckNullValue(this, nameof(chestItemPrefab), chestItemPrefab);
         // HelperUtilities.ValidateCheckNullValue(this, nameof(heartIcon), heartIcon);

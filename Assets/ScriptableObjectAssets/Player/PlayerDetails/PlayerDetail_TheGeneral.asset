@@ -16,7 +16,16 @@ MonoBehaviour:
   playerPrefab: {fileID: 5322015374211306264, guid: 3b980d644d7f6c24bba35756bad666ef, type: 3}
   RuntimeAnimatorController: {fileID: 9100000, guid: e87ce176a15556c459b355908992b930, type: 2}
   playerHealthAmount: 100
-  startingWeapon: {fileID: 11400000, guid: 9a3bf7e9b1d294a49a1d219a32b8784d, type: 2}
-  startingWeaponList: []
+  startingWeapon: {fileID: 11400000, guid: 88c2870cd7b9e294f9cb36e48b23c380, type: 2}
+  startingWeaponList:
+  - {fileID: 11400000, guid: 9a3bf7e9b1d294a49a1d219a32b8784d, type: 2}
+  - {fileID: 11400000, guid: 1b5b88a19346c1445a22c41077f96082, type: 2}
+  - {fileID: 11400000, guid: 88c2870cd7b9e294f9cb36e48b23c380, type: 2}
+  - {fileID: 11400000, guid: e110ebd3364a33942a02ee8b0fdff219, type: 2}
+  - {fileID: 11400000, guid: 87b57523050802547b7191c454c9c384, type: 2}
+  - {fileID: 11400000, guid: bc42a4bbe12bc6a4d8025bba99092ca8, type: 2}
+  - {fileID: 11400000, guid: bbc979568ad9b734fb422767b1f8d68b, type: 2}
+  - {fileID: 11400000, guid: 03619073996a6fb4aa65507d46d23727, type: 2}
+  - {fileID: 11400000, guid: 0e79efade88070b45abf177a3ab2f286, type: 2}
   playerMinimapIcon: {fileID: 21300000, guid: 709f49100a0267f419aa33d571fb9d25, type: 3}
   playerHandSprite: {fileID: 21300000, guid: a8c352369ed75924d84743672d1ab512, type: 3}

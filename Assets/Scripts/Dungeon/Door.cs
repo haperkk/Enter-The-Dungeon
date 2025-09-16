@@ -46,11 +46,7 @@ public class Door : MonoBehaviour
         // room) the animator state gets reset. Therefore we need to restore the animator state.
         animator.SetBool(Settings.open, isOpen);
     }
-
-
-    /// <summary>
-    /// Open the door
-    /// </summary>
+    
     public void OpenDoor()
     {
         if (!isOpen)
@@ -64,14 +60,11 @@ public class Door : MonoBehaviour
             animator.SetBool(Settings.open, true);
 
             // play sound effect
-            // SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.doorOpenCloseSoundEffect);
+            SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.doorOpenCloseSoundEffect);
 
         }
     }
 
-    /// <summary>
-    /// Lock the door
-    /// </summary>
     public void LockDoor()
     {
         isOpen = false;
@@ -82,9 +75,6 @@ public class Door : MonoBehaviour
         animator.SetBool(Settings.open, false);
     }
 
-    /// <summary>
-    /// Unlock the door
-    /// </summary>
     public void UnlockDoor()
     {
         doorCollider.enabled = false;

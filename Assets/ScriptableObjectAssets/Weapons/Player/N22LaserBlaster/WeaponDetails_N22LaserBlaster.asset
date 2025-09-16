@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79234601a20532845ae8072aee01c742, type: 3}
+  m_Name: WeaponDetails_N22LaserBlaster
+  m_EditorClassIdentifier: 
+  weaponName: N22LaserBlaster
+  weaponSprite: {fileID: 21300000, guid: e9d1276e0a6b9bf42b04b5470c7073fb, type: 3}
+  weaponShootPosition: {x: 1.323, y: 0.294, z: 0}
+  weaponCurrentAmmo: {fileID: 11400000, guid: 89618d2906022f447bc0a07e0dd21170, type: 2}
+  weaponFiringSoundEffect: {fileID: 11400000, guid: 8138b90336da52c469ac4edd8740a65a, type: 2}
+  weaponReloadingSoundEffect: {fileID: 11400000, guid: d21c88cd70c805d47b393e692df5a6a8, type: 2}
+  hasInfiniteAmmo: 0
+  hasInfiniteClipCapacity: 0
+  weaponClipAmmoCapacity: 8
+  weaponAmmoCapacity: 50
+  weaponFireRate: 0.5
+  weaponPrechargeTime: 0.3
+  weaponReloadTime: 3

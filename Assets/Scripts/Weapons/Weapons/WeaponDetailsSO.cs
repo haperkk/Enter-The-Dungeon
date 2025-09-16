@@ -32,14 +32,14 @@ public class WeaponDetailsSO : ScriptableObject
     // [Tooltip("Weapon shoot effect SO - contains particle effecct parameters to be used in conjunction with the weaponShootEffectPrefab ")]
     // #endregion Tooltip
     // public WeaponShootEffectSO weaponShootEffect;
-    // #region Tooltip
-    // [Tooltip("The firing sound effect SO for the weapon")]
-    // #endregion Tooltip
-    // public SoundEffectSO weaponFiringSoundEffect;
-    // #region Tooltip
-    // [Tooltip("The reloading sound effect SO for the weapon")]
-    // #endregion Tooltip
-    // public SoundEffectSO weaponReloadingSoundEffect;
+    #region Tooltip
+    [Tooltip("The firing sound effect SO for the weapon")]
+    #endregion Tooltip
+    public SoundEffectSO weaponFiringSoundEffect;
+    #region Tooltip
+    [Tooltip("The reloading sound effect SO for the weapon")]
+    #endregion Tooltip
+    public SoundEffectSO weaponReloadingSoundEffect;
     #region Header WEAPON OPERATING VALUES
     [Space(10)]
     [Header("WEAPON OPERATING VALUES")]
@@ -67,7 +67,7 @@ public class WeaponDetailsSO : ScriptableObject
     #region Tooltip
     [Tooltip("Weapon Precharge Time - time in seconds to hold fire button down before firing")]
     #endregion Tooltip
-    //todo: what's the difference between precharge and ammo's ammochargetime?
+    //todo: what's the difference between precharge and ammo's ammochargetime?  这是类似激光武器的发射前摇时间 
     public float weaponPrechargeTime = 0f;
     #region Tooltip
     [Tooltip("This is the weapon reload time in seconds")]

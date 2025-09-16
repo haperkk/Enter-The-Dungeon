@@ -209,4 +209,12 @@ public static class HelperUtilities
         Vector3 directionVector = new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad), 0f);
         return directionVector;
     }
+    
+    
+    //convert the linear volume scale to decibels
+    public static float LinearToDecibels(int linear)
+    {
+        float linearScaleRange = 20f;
+        return Mathf.Log10((float)linear / linearScaleRange) * 20f;
+    }
 }

@@ -121,7 +121,7 @@ public class AmmoDetailsSO : ScriptableObject
     #region Tooltip
     [Tooltip("Ammo trail lifetime in seconds.")]
     #endregion
-    public float ammoTrailTime = 3f;
+    public float ammoTrailTime = 0.1f;
     #region Tooltip
     [Tooltip("Ammo trail material.")]
     #endregion

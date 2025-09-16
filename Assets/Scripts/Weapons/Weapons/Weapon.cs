@@ -9,4 +9,5 @@ public class Weapon
     public float weaponClipRemainingAmmo;
     public int weaponRemainingAmmo;
     public bool isWeaponReloading;
+    public float weaponReloadTimer;
 }

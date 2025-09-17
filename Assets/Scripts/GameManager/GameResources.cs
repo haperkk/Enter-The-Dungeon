@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Tilemaps;
 
 public class GameResources : MonoBehaviour
 {
@@ -32,6 +33,10 @@ public class GameResources : MonoBehaviour
     public Material dimmedMaterial;
     public Material litMaterial;
     public Shader variableLitShader;
+    
+    //Astar
+    public TileBase[] enemyUnwalkableCollisionTilesArray;
+    public TileBase preferredEnemyPathTile;
     
     //This is used to reference the current player between scenes
     public CurrentPlayerSO currentPlayer;
@@ -65,8 +70,8 @@ public class GameResources : MonoBehaviour
         HelperUtilities.ValidateCheckNullValue(this, nameof(dimmedMaterial), dimmedMaterial);
         HelperUtilities.ValidateCheckNullValue(this, nameof(variableLitShader), variableLitShader);
         // HelperUtilities.ValidateCheckNullValue(this, nameof(materializeShader), materializeShader);
-        // HelperUtilities.ValidateCheckEnumerableValues(this, nameof(enemyUnwalkableCollisionTilesArray), enemyUnwalkableCollisionTilesArray);
-        // HelperUtilities.ValidateCheckNullValue(this, nameof(preferredEnemyPathTile), preferredEnemyPathTile);
+        HelperUtilities.ValidateCheckEnumerableValues(this, nameof(enemyUnwalkableCollisionTilesArray), enemyUnwalkableCollisionTilesArray);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(preferredEnemyPathTile), preferredEnemyPathTile);
         // HelperUtilities.ValidateCheckNullValue(this, nameof(musicMasterMixerGroup), musicMasterMixerGroup);
         // HelperUtilities.ValidateCheckNullValue(this, nameof(musicOnFullSnapshot), musicOnFullSnapshot);
         // HelperUtilities.ValidateCheckNullValue(this, nameof(musicLowSnapshot), musicLowSnapshot);

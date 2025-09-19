@@ -47,6 +47,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkullFace
       objectReference: {fileID: 0}
+    - target: {fileID: 5989948922764122754, guid: 07e2abbc19d92d84ea987350a954d604, type: 3}
+      propertyPath: enemyDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: d695f7b0f2a8467419d13c5274b9ec9a, type: 2}
+    - target: {fileID: 6800228695755793837, guid: 07e2abbc19d92d84ea987350a954d604, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 223061e2d849e6149a6f101f11577a33, type: 2}
     - target: {fileID: 7948338393283569255, guid: 07e2abbc19d92d84ea987350a954d604, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 3

@@ -159,6 +159,49 @@ RectTransform:
   m_AnchoredPosition: {x: -25, y: 0}
   m_SizeDelta: {x: 50, y: 2}
   m_Pivot: {x: 0, y: 0.5}
+--- !u!1 &50950726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 50950728}
+  - component: {fileID: 50950727}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &50950727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50950726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adfb6a9c9e779d14b814fae9ef28cfec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &50950728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50950726}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.1625113, y: 13.450814, z: -7.5875525}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &55469654
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,6 +511,7 @@ GameObject:
   - component: {fileID: 182402878}
   - component: {fileID: 182402877}
   - component: {fileID: 182402879}
+  - component: {fileID: 182402880}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -491,6 +535,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 36876601cdd7c5d498429195716c3dea, type: 2}
   currentDungeonLevelListIndex: 0
   gameState: 0
+  previousGameState: 0
 --- !u!4 &182402878
 Transform:
   m_ObjectHideFlags: 0
@@ -513,6 +558,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182402876}
   m_Enabled: 1
+--- !u!114 &182402880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182402876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7abccba4bd3ce2844b06c0a5c854210a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &199059024
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +956,9 @@ MonoBehaviour:
   - poolSize: 20
     prefab: {fileID: 8802264816595064599, guid: 3b8cc3b5f5df8b544a01c6f9c971702e, type: 3}
     componentType: AmmoHitEffect
+  - poolSize: 200
+    prefab: {fileID: 8575403246309955786, guid: d27eb0feab5c7754d88009373f904ca3, type: 3}
+    componentType: IFireable
 --- !u!4 &441810932
 Transform:
   m_ObjectHideFlags: 0
@@ -1702,7 +1762,6 @@ GameObject:
   m_Component:
   - component: {fileID: 797674932}
   - component: {fileID: 797674931}
-  - component: {fileID: 797674933}
   m_Layer: 0
   m_Name: DungeonBuilder
   m_TagString: Untagged
@@ -1736,18 +1795,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &797674933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797674930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d073d0491b9061b4dba35a31bf8c73c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &963387831
 GameObject:
   m_ObjectHideFlags: 0

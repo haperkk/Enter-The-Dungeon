@@ -79,6 +79,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimeBlock_Green
       objectReference: {fileID: 0}
+    - target: {fileID: 5989948922764122754, guid: 07e2abbc19d92d84ea987350a954d604, type: 3}
+      propertyPath: enemyDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 5dde281eefc6adc429af6b7ae93abcab, type: 2}
+    - target: {fileID: 6800228695755793837, guid: 07e2abbc19d92d84ea987350a954d604, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: f604e69d170ca6b4bbd27972c8376257, type: 2}
     - target: {fileID: 7948338393283569255, guid: 07e2abbc19d92d84ea987350a954d604, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
       value: -0.39408258

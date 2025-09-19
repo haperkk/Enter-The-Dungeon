@@ -83,6 +83,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orc_Flesh
       objectReference: {fileID: 0}
+    - target: {fileID: 5989948922764122754, guid: 07e2abbc19d92d84ea987350a954d604, type: 3}
+      propertyPath: enemyDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 226a1f180c404b347a539b3516332ad0, type: 2}
+    - target: {fileID: 6800228695755793837, guid: 07e2abbc19d92d84ea987350a954d604, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 4791f9357cd2d4e4f8eee6a884521950, type: 2}
     - target: {fileID: 7948338393283569255, guid: 07e2abbc19d92d84ea987350a954d604, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2.25

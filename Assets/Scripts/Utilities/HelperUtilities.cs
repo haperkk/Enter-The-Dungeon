@@ -33,36 +33,36 @@ public static class HelperUtilities
         //Up Right
         if (angleDegrees >= 22f && angleDegrees <= 67f)
         {
-            aimDirection = AimDirection.upRight;
+            aimDirection = AimDirection.UpRight;
         }
         // Up
         else if (angleDegrees > 67f && angleDegrees <= 112f)
         {
-            aimDirection = AimDirection.up;
+            aimDirection = AimDirection.Up;
         }
         // Up Left
         else if (angleDegrees > 112f && angleDegrees <= 158f)
         {
-            aimDirection = AimDirection.upLeft;
+            aimDirection = AimDirection.UpLeft;
         }
         // Left
         else if ((angleDegrees <= 180f && angleDegrees > 158f) || (angleDegrees > -180 && angleDegrees <= -135f))
         {
-            aimDirection = AimDirection.left;
+            aimDirection = AimDirection.Left;
         }
         // Down
         else if ((angleDegrees > -135f && angleDegrees <= -45f))
         {
-            aimDirection = AimDirection.down;
+            aimDirection = AimDirection.Down;
         }
         // Right
         else if ((angleDegrees > -45f && angleDegrees <= 0f) || (angleDegrees > 0 && angleDegrees < 22f))
         {
-            aimDirection = AimDirection.right;
+            aimDirection = AimDirection.Right;
         }
         else
         {
-            aimDirection = AimDirection.right;
+            aimDirection = AimDirection.Right;
         }
 
         return aimDirection;

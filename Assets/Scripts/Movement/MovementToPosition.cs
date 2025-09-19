@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(MovementToPositionEvent))]
-public class MoveToPosition : MonoBehaviour
+public class MovementToPosition : MonoBehaviour
 {
     private Rigidbody2D rigidBody2D;
     private MovementToPositionEvent movementToPositionEvent;

@@ -36,8 +36,8 @@ public static class Settings
     
     // animator params
     public static int open = Animator.StringToHash("open");
-
-    public static float baseSpeedForPlayerAnimations = 8f;
+    public static float baseSpeedForPlayerAnimations = 8f; //factor for the situtation if the movespeed if fast, but anim speed is slow;
+    public static float baseSpeedForEnemyAnimations = 8f;
 
     #endregion
 
@@ -50,6 +50,9 @@ public static class Settings
     //Atar penalty
     public const int defaultAStarMovementPenalty = 40;
     public const int preferredPathAStarMovementPenalty = 1;
+    public const int targetFrameRateToSpreadPathfindingOver = 60; //将不同enemy的buildpath分散到一秒内targetFrameRateToSpreadPathfindOver帧中
+    public const float playerMoveDistanceToRebuildPath = 3f;
+    public const float enemyPathRebuildCooldown = 2f;
     
     #region FIRING CONTROL
     public const float useAimAngleDistance = 3.5f; // if the target distance is less than this then the aim angle will be used (calculated from player), else the weapon aim angle will be used (calculated from the weapon). 

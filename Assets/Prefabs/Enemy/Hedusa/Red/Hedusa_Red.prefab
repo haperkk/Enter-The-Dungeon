@@ -27,6 +27,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hedusa_Red
       objectReference: {fileID: 0}
+    - target: {fileID: 5989948922764122754, guid: 07e2abbc19d92d84ea987350a954d604, type: 3}
+      propertyPath: enemyDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 92e1348da5340134d87d24893db94923, type: 2}
+    - target: {fileID: 6800228695755793837, guid: 07e2abbc19d92d84ea987350a954d604, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 315ab255e920e60439e431708e9d0beb, type: 2}
     - target: {fileID: 7948338393283569255, guid: 07e2abbc19d92d84ea987350a954d604, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 1.875

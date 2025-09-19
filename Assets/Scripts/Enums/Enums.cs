@@ -9,12 +9,12 @@
 
 public enum AimDirection
 {
-    up,
-    upRight,
-    upLeft,
-    right,
-    down,
-    left,
+    Up,
+    UpRight,
+    UpLeft,
+    Right,
+    Down,
+    Left,
 }
 
 public enum GameState

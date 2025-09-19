@@ -50,15 +50,15 @@ public class AimWeapon : MonoBehaviour
         // Flip weapon transform based on player direction
         switch (aimDirection)
         {
-            case AimDirection.left:
-            case AimDirection.upLeft:
+            case AimDirection.Left:
+            case AimDirection.UpLeft:
                 weaponRotationPointTransform.localScale = new Vector3(1f, -1f, 0f);
                 break;
 
-            case AimDirection.up:
-            case AimDirection.upRight:
-            case AimDirection.right:
-            case AimDirection.down:
+            case AimDirection.Up:
+            case AimDirection.UpRight:
+            case AimDirection.Right:
+            case AimDirection.Down:
                 weaponRotationPointTransform.localScale = new Vector3(1f, 1f, 0f);
                 break;
         }

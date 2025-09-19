@@ -16,7 +16,7 @@ using UnityEngine.Serialization;
 [RequireComponent(typeof(MovementByVelocityEvent))]
 [RequireComponent(typeof(MovementByVelocity))]
 [RequireComponent(typeof(MovementToPositionEvent))]
-[RequireComponent(typeof(MoveToPosition))]
+[RequireComponent(typeof(MovementToPosition))]
 [RequireComponent(typeof(SetActiveWeaponEvent))]
 [RequireComponent(typeof(ActiveWeapon))]
 [RequireComponent(typeof(FireWeaponEvent))]
@@ -118,5 +118,10 @@ public class Player : MonoBehaviour
     private void SetPlayerHealth()
     {
         health.SetStartingHealth(playerDetails.playerHealthAmount);
+    }
+
+    public Vector3 GetPlayerPosition()
+    {
+        return transform.position;
     }
 }

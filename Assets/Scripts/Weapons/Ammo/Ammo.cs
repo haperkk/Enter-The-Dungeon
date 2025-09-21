@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
+[DisallowMultipleComponent]
 public class Ammo : MonoBehaviour, IFireable
 {
     #region Tooltip
@@ -24,6 +21,7 @@ public class Ammo : MonoBehaviour, IFireable
 
     private void Awake()
     {
+        // cache sprite renderer
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -54,25 +52,26 @@ public class Ammo : MonoBehaviour, IFireable
 
             if (ammoRange < 0f)
             {
-                // if (ammoDetails.isPlayerAmmo)
-                // {
-                //     // no multiplier
-                //     StaticEventHandler.CallMultiplierEvent(false);
-                // }
+                if (ammoDetails.isPlayerAmmo)
+                {
+                    // no multiplier
+                    StaticEventHandler.CallMultiplierEvent(false);
+                }
 
                 DisableAmmo();
             }
         }
+
     }
-    
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // If already colliding with something return
         if (isColliding) return;
-        
+
         // Deal Damage To Collision Object
         DealDamage(collision);
-        //
+
         // Show ammo hit effect
         AmmoHitEffect();
 
@@ -82,29 +81,40 @@ public class Ammo : MonoBehaviour, IFireable
     private void DealDamage(Collider2D collision)
     {
         Health health = collision.GetComponent<Health>();
+
+        bool enemyHit = false;
+
         if (health != null)
         {
+            // Set isColliding to prevent ammo dealing damage multiple times
             isColliding = true;
+
             health.TakeDamage(ammoDetails.ammoDamage);
-        }
-    }
 
-    private void AmmoHitEffect()
-    {
-        // Process if a hit effect has been specified
-        if (ammoDetails.ammoHitEffect != null && ammoDetails.ammoHitEffect.ammoHitEffectPrefab != null)
+            // Enemy hit
+            if (health.enemy != null)
+            {
+                enemyHit = true;
+            }
+        }
+
+        // If player ammo then update multiplier
+        if (ammoDetails.isPlayerAmmo)
         {
-            // Get ammo hit effect gameobject from the pool (with particle system component)
-            AmmoHitEffect ammoHitEffect = (AmmoHitEffect)PoolManager.Instance.ReuseComponent(ammoDetails.ammoHitEffect.ammoHitEffectPrefab, transform.position, Quaternion.identity);
-
-            // Set Hit Effect
-            ammoHitEffect.SetHitEffect(ammoDetails.ammoHitEffect);
-
-            // Set gameobject active (the particle system is set to automatically disable the gameobject once finished)
-            ammoHitEffect.gameObject.SetActive(true);
+            if (enemyHit)
+            {
+                // multiplier
+                StaticEventHandler.CallMultiplierEvent(true);
+            }
+            else
+            {
+                // no multiplier
+                StaticEventHandler.CallMultiplierEvent(false);
+            }
         }
-    }
 
+    }
+    
     public void InitializeAmmo(AmmoDetailsSO ammoDetails, float aimAngle, float weaponAimAngle, float ammoSpeed, Vector3 weaponAimDirectionVector, bool overrideAmmoMovement = false)
     {
         #region Ammo
@@ -170,7 +180,7 @@ public class Ammo : MonoBehaviour, IFireable
         #endregion Trail
 
     }
-    
+
     private void SetFireDirection(AmmoDetailsSO ammoDetails, float aimAngle, float weaponAimAngle, Vector3 weaponAimDirectionVector)
     {
         // calculate random spread angle between min and max
@@ -198,22 +208,41 @@ public class Ammo : MonoBehaviour, IFireable
         fireDirectionVector = HelperUtilities.GetDirectionVectorFromAngle(fireDirectionAngle);
 
     }
-    
-    public void SetAmmoMaterial(Material material)
-    {
-        spriteRenderer.material = material;
-    }
-    
+
     private void DisableAmmo()
     {
         gameObject.SetActive(false);
     }
 
+    private void AmmoHitEffect()
+    {
+        // Process if a hit effect has been specified
+        if (ammoDetails.ammoHitEffect != null && ammoDetails.ammoHitEffect.ammoHitEffectPrefab != null)
+        {
+            // Get ammo hit effect gameobject from the pool (with particle system component)
+            AmmoHitEffect ammoHitEffect = (AmmoHitEffect)PoolManager.Instance.ReuseComponent(ammoDetails.ammoHitEffect.ammoHitEffectPrefab, transform.position, Quaternion.identity);
+
+            // Set Hit Effect
+            ammoHitEffect.SetHitEffect(ammoDetails.ammoHitEffect);
+
+            // Set gameobject active (the particle system is set to automatically disable the
+            // gameobject once finished)
+            ammoHitEffect.gameObject.SetActive(true);
+        }
+    }
+
+
+    public void SetAmmoMaterial(Material material)
+    {
+        spriteRenderer.material = material;
+    }
+
+
     public GameObject GetGameObject()
     {
-        throw new System.NotImplementedException();
+        return gameObject;
     }
-    
+
     #region Validation
 #if UNITY_EDITOR
 
@@ -224,4 +253,5 @@ public class Ammo : MonoBehaviour, IFireable
 
 #endif
     #endregion Validation
+
 }

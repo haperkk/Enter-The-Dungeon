@@ -92,10 +92,10 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
             room.instantiatedRoom = instantiatedRoom;
 
             //// Demo code to set rooms as cleared - except for boss
-            //if (!room.roomNodeType.isBossRoom)
-            //{
-            //    room.isClearedOfEnemies = true;
-            //}
+            // if (!room.roomNodeType.isBossRoom)
+            // {
+            //     room.isClearedOfEnemies = true;
+            // }
         }
     }
 
@@ -314,7 +314,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         }
     }
 
-    private bool IsOverlappingInterval(int imin1, int imax1, int imin2, int imax2)
+    private bool IsOverlappingInterval(int imin1, int imax1, int imin2, int imax2) 
     {
         if (Mathf.Max(imin1, imin2) <= Mathf.Min(imax1, imax2))
         {

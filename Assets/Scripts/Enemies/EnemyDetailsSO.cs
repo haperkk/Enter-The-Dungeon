@@ -98,7 +98,7 @@ public class EnemyDetailsSO : ScriptableObject
     #region Tooltip
     [Tooltip("Select to display a health bar for the enemy")]
     #endregion
-    public bool isHealthBarDisplayed = false;
+    public bool isHealthBarDisplayed = true;
 
 
 

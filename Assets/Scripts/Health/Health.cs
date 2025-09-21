@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
     #region Tooltip
     [Tooltip("Populate with the HealthBar component on the HealthBar gameobject")]
     #endregion
-    // [SerializeField] private HealthBar healthBar;
+    [SerializeField] private HealthBar healthBar;
     private int startingHealth;
     private int currentHealth;
     private HealthEvent healthEvent;
@@ -64,14 +64,14 @@ public class Health : MonoBehaviour
         }
 
         // Enable the health bar if required
-        // if (enemy != null && enemy.enemyDetails.isHealthBarDisplayed == true && healthBar != null)
-        // {
-        //     healthBar.EnableHealthBar();
-        // }
-        // else if (healthBar != null)
-        // {
-        //     healthBar.DisableHealthBar();
-        // }
+        if (enemy != null && enemy.enemyDetails.isHealthBarDisplayed == true && healthBar != null)
+        {
+            healthBar.EnableHealthBar();
+        }
+        else if (healthBar != null)
+        {
+            healthBar.DisableHealthBar();
+        }
     }
 
     public void TakeDamage(int damageAmount)
@@ -89,10 +89,10 @@ public class Health : MonoBehaviour
             PostHitImmunity();
 
             // Set health bar as the percentage of health remaining
-            // if (healthBar != null)
-            // {
-            //     healthBar.SetHealthBarValue((float)currentHealth / (float)startingHealth);
-            // }
+            if (healthBar != null)
+            {
+                healthBar.SetHealthBarValue((float)currentHealth / (float)startingHealth);
+            }
         }
     }
 

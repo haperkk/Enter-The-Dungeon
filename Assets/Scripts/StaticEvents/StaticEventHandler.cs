@@ -24,7 +24,8 @@ public static class StaticEventHandler
 
     // Points scored event
     public static event Action<PointsScoredArgs> OnPointsScored;
-
+    
+    
     public static void CallPointsScoredEvent(int points)
     {
         OnPointsScored?.Invoke(new PointsScoredArgs() { points = points });
@@ -57,11 +58,13 @@ public class RoomEnemiesDefeatedArgs : EventArgs
     public Room room;
 }
 
+//point is the what we got the base value to caulculate score if we killed an enemy ?
 public class PointsScoredArgs : EventArgs
 {
     public int points;
 }
 
+//score is a calculated item  base on point ?
 public class ScoreChangedArgs : EventArgs
 {
     public long score;

@@ -47,6 +47,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimeKing
       objectReference: {fileID: 0}
+    - target: {fileID: 4369062634504417041, guid: 07e2abbc19d92d84ea987350a954d604, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5989948922764122754, guid: 07e2abbc19d92d84ea987350a954d604, type: 3}
       propertyPath: enemyDetails
       value: 

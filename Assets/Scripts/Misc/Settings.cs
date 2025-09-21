@@ -16,6 +16,7 @@ public static class Settings
     public const float fadeInTime = 0.5f;
     // max number of child corridors a room can have
     public const int maxChildCorridors = 3;
+    public const float doorUnlockDelay = 1f;
 
     #endregion
     
@@ -57,8 +58,19 @@ public static class Settings
     #region FIRING CONTROL
     public const float useAimAngleDistance = 3.5f; // if the target distance is less than this then the aim angle will be used (calculated from player), else the weapon aim angle will be used (calculated from the weapon). 
     #endregion
+    
+    #region ENEMY PARAMETERS
+    public const int defaultEnemyHealth = 20;
+    #endregion
 
     #region UI PARAMETERS
     public const float uiAmmoIconSpacing = 4f;
+    public const float uiHeartSpacing = 16f;
+
+    #endregion
+    
+    #region CONTACT DAMAGE PARAMETERS
+    public const float contactDamageCollisionResetDelay = 0.5f;
+
     #endregion
 }

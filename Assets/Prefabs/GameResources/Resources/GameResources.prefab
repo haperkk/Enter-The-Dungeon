@@ -55,3 +55,4 @@ MonoBehaviour:
   soundsMasterMixerGroup: {fileID: -4734643798044506327, guid: 2ac509b551addfb48950fbdc0d9cefb4, type: 2}
   doorOpenCloseSoundEffect: {fileID: 11400000, guid: 4f50da51a1063c947a3cc423f31637c6, type: 2}
   ammoIconPrefab: {fileID: 1393089498759673575, guid: 9dcb96a2d78aebc41a0fbf9d0d91bee1, type: 3}
+  heartPrefab: {fileID: 2998743382787293946, guid: 5fd08dfcd15ad134789ba1ace75d328f, type: 3}

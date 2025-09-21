@@ -84,10 +84,10 @@ public class EnemyDetailsSO : ScriptableObject
     [Header("ENEMY HEALTH")]
     #endregion
     #region Tooltip
-    // [Tooltip("The health of the enemy for each level")]
-    // #endregion
-    // // public EnemyHealthDetails[] enemyHealthDetailsArray;
-    // #region Tooltip
+    [Tooltip("The health of the enemy for each level")]
+    #endregion
+    public EnemyHealthDetails[] enemyHealthDetailsArray;
+    #region Tooltip
     [Tooltip("Select if has immunity period immediately after being hit.  If so specify the immunity time in seconds in the other field")]
     #endregion
     public bool isImmuneAfterHit = false;

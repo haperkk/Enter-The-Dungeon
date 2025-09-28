@@ -42,14 +42,14 @@ public class ActivateRooms : MonoBehaviour
                 room.instantiatedRoom.gameObject.SetActive(true);
 
                 // If room is within main camera viewport then activate environment game objects
-                // if ((room.lowerBounds.x <= mainCameraWorldPositionUpperBounds.x && room.lowerBounds.y <= mainCameraWorldPositionUpperBounds.y) && (room.upperBounds.x >= mainCameraWorldPositionLowerBounds.x && room.upperBounds.y >= mainCameraWorldPositionLowerBounds.y))
-                // {
-                //     room.instantiatedRoom.ActivateEnvironmentGameObjects();
-                // }
-                // else
-                // {
-                //     room.instantiatedRoom.DeactivateEnvironmentGameObjects();
-                // }
+                if ((room.lowerBounds.x <= mainCameraWorldPositionUpperBounds.x && room.lowerBounds.y <= mainCameraWorldPositionUpperBounds.y) && (room.upperBounds.x >= mainCameraWorldPositionLowerBounds.x && room.upperBounds.y >= mainCameraWorldPositionLowerBounds.y))
+                {
+                    room.instantiatedRoom.ActivateEnvironmentGameObjects();
+                }
+                else
+                {
+                    room.instantiatedRoom.DeactivateEnvironmentGameObjects();
+                }
 
 
             }

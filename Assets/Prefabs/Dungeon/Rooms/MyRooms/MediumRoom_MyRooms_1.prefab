@@ -54803,6 +54803,8 @@ MonoBehaviour:
   roomColliderBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
+  moveableItemsList: []
+  environmentGameObject: {fileID: 1301251246884160072}
 --- !u!114 &7780087140833532919
 MonoBehaviour:
   m_ObjectHideFlags: 0

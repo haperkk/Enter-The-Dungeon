@@ -175,5 +175,4 @@ public class Health : MonoBehaviour
 
         CallHealthEvent(0);
     }
-
 }

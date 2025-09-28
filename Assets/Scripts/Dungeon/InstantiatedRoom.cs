@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,9 +17,20 @@ public class InstantiatedRoom : MonoBehaviour
     [HideInInspector] public Tilemap collisionTilemap;
     [HideInInspector] public Tilemap minimapTilemap;
     [HideInInspector] public int[,] aStarMovementPenalty;
+    
+    [HideInInspector] public int[,] aStarItemObstacles;
     [HideInInspector] public Bounds roomColliderBounds;
+    [HideInInspector] public List<MoveItem> moveableItemsList = new List<MoveItem>();
     
     private BoxCollider2D boxCollider2D;
+    
+    #region Tooltip
+
+    [Tooltip("Populate with the environment child placeholder gameobject ")]
+
+    #endregion Tooltip
+
+    [SerializeField] private GameObject environmentGameObject;
     
     private void Awake()
     {
@@ -26,7 +38,12 @@ public class InstantiatedRoom : MonoBehaviour
 
         roomColliderBounds = boxCollider2D.bounds;
     }
-    
+
+    private void Start()
+    {
+        UpdateMoveableObstacles();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // If the player triggered the collider
@@ -47,10 +64,68 @@ public class InstantiatedRoom : MonoBehaviour
         BlockOffUnusedDoorWays();
 
         AddObstaclesAndPreferredPaths();
+        
+        CreateItemObstaclesArray();
 
         AddDoorsToRooms();
 
         DisableCollisionTilemapRenderer();
+    }
+    
+    private void CreateItemObstaclesArray()
+    {
+        // this array will be populated during gameplay with any moveable obstacles
+        aStarItemObstacles = new int[room.templateUpperBounds.x - room.templateLowerBounds.x + 1, room.templateUpperBounds.y - room.templateLowerBounds.y + 1];
+    }
+    
+    public void UpdateMoveableObstacles()
+    {
+        InitializeItemObstaclesArray();
+
+        foreach (MoveItem moveItem in moveableItemsList)
+        {
+            Vector3Int colliderBoundsMin = grid.WorldToCell(moveItem.boxCollider2D.bounds.min);
+            Vector3Int colliderBoundsMax = grid.WorldToCell(moveItem.boxCollider2D.bounds.max);
+
+            // Loop through and add moveable item collider bounds to obstacle array
+            for (int i = colliderBoundsMin.x; i <= colliderBoundsMax.x; i++)
+            {
+                for (int j = colliderBoundsMin.y; j <= colliderBoundsMax.y; j++)
+                {
+                    aStarItemObstacles[i - room.templateLowerBounds.x, j - room.templateLowerBounds.y] = 0;
+                }
+            }
+        }
+    }
+    
+    // private void OnDrawGizmos()
+    // {
+    //     Debug.Log("drawing");
+    //     for (int i = 0; i < (room.templateUpperBounds.x - room.templateLowerBounds.x + 1); i++)
+    //     {
+    //         for (int j = 0; j < (room.templateUpperBounds.y - room.templateLowerBounds.y + 1); j++)
+    //         {
+    //             if (aStarItemObstacles[i, j] == 0)
+    //             {
+    //                 Vector3 worldCellPos = grid.CellToWorld(new Vector3Int(i + room.templateLowerBounds.x, j + room.templateLowerBounds.y, 0));
+    //
+    //                 Gizmos.DrawWireCube(new Vector3(worldCellPos.x + 0.5f, worldCellPos.y + 0.5f, 0), Vector3.one);
+    //             }
+    //         }
+    //     }
+    //
+    // }
+    
+    private void InitializeItemObstaclesArray()
+    {
+        for (int x = 0; x < (room.templateUpperBounds.x - room.templateLowerBounds.x + 1); x++)
+        {
+            for (int y = 0; y < (room.templateUpperBounds.y - room.templateLowerBounds.y + 1); y++)
+            {
+                // Set default movement penalty for grid sqaures
+                aStarItemObstacles[x, y] = Settings.defaultAStarMovementPenalty;
+            }
+        }
     }
 
     private void AddObstaclesAndPreferredPaths()
@@ -143,9 +218,8 @@ public class InstantiatedRoom : MonoBehaviour
                     doorComponent.LockDoor();
                 
                     // Instantiate skull icon for minimap by door
-                    // GameObject skullIcon = Instantiate(GameResources.Instance.minimapSkullPrefab, gameObject.transform);
-                    // skullIcon.transform.localPosition = door.transform.localPosition;
-                
+                    GameObject skullIcon = Instantiate(GameResources.Instance.minimapSkullPrefab, gameObject.transform);
+                    skullIcon.transform.localPosition = door.transform.localPosition;
                 }
             }
 
@@ -336,6 +410,18 @@ public class InstantiatedRoom : MonoBehaviour
         EnableRoomCollider();
     }
     
+    public void ActivateEnvironmentGameObjects()
+    {
+        if (environmentGameObject != null)
+            environmentGameObject.SetActive(true);
+    }
+
+    public void DeactivateEnvironmentGameObjects()
+    {
+        if (environmentGameObject != null)
+            environmentGameObject.SetActive(false);
+    }
+    
     
     public void DisableRoomCollider()
     {
@@ -346,4 +432,17 @@ public class InstantiatedRoom : MonoBehaviour
     {
         boxCollider2D.enabled = true;
     }
+    
+    #region Validation
+
+#if UNITY_EDITOR
+
+    private void OnValidate()
+    {
+        HelperUtilities.ValidateCheckNullValue(this, nameof(environmentGameObject), environmentGameObject);
+    }
+
+#endif
+
+    #endregion Validation
 }

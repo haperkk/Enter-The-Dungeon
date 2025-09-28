@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "PlayerDetail", menuName = "Scriptable Objects/Player/Player Detail")]
 public class PlayerDetailsSO : ScriptableObject
 {
     public string playerCharacterName;
     public GameObject playerPrefab;
-    public RuntimeAnimatorController RuntimeAnimatorController;
+    public RuntimeAnimatorController runtimeAnimatorController;
     public int playerHealthAmount;
     public bool isImmuneAfterHit = false;
     public float hitImmunityTime;
@@ -30,7 +31,7 @@ public class PlayerDetailsSO : ScriptableObject
         HelperUtilities.ValidateCheckPositiveValue(this, nameof(playerHealthAmount), playerHealthAmount);
         HelperUtilities.ValidateCheckNullValue(this, nameof(playerMinimapIcon), playerMinimapIcon);
         HelperUtilities.ValidateCheckNullValue(this, nameof(playerHandSprite), playerHandSprite);
-        HelperUtilities.ValidateCheckNullValue(this, nameof(RuntimeAnimatorController), RuntimeAnimatorController);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(runtimeAnimatorController), runtimeAnimatorController);
         HelperUtilities.ValidateCheckEnumerableValues(this, nameof(startingWeaponList), startingWeaponList);
         if (isImmuneAfterHit)
         {

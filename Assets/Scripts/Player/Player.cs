@@ -103,8 +103,6 @@ public class Player : MonoBehaviour
     
     private void HealthEvent_OnHealthChanged(HealthEvent healthEvent, HealthEventArgs healthEventArgs)
     {
-        Debug.Log("Health Amount = " + healthEventArgs.healthAmount);
-
         if (healthEventArgs.healthAmount <= 0f)
         {
             destroyedEvent.CallDestroyedEvent(true, 0);
@@ -130,7 +128,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private Weapon AddWeaponToPlayer(WeaponDetailsSO weaponDetails)
+    public Weapon AddWeaponToPlayer(WeaponDetailsSO weaponDetails)
     {
         Weapon weapon = new Weapon
         {
@@ -158,5 +156,16 @@ public class Player : MonoBehaviour
     public Vector3 GetPlayerPosition()
     {
         return transform.position;
+    }
+    
+    public bool IsWeaponHeldByPlayer(WeaponDetailsSO weaponDetails)
+    {
+
+        foreach (Weapon weapon in weaponList)
+        {
+            if (weapon.weaponDetails == weaponDetails) return true;
+        }
+
+        return false;
     }
 }

@@ -9,6 +9,13 @@ using UnityEngine.UI;
 [DisallowMultipleComponent]
 public class GameManager : SingletonMonobehaviour<GameManager>
 {
+    #region Tooltip
+
+    [Tooltip("Populate with pause menu gameobject in hierarchy")]
+
+    #endregion Tooltip
+
+    [SerializeField] private GameObject pauseMenu;
     //UI
     [SerializeField] private TextMeshProUGUI messageTextTMP;
     [SerializeField] private CanvasGroup canvasGroup;
@@ -82,65 +89,65 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             // While playing the level handle the tab key for the dungeon overview map.
             case GameState.playingLevel:
 
-                // if (Input.GetKeyDown(KeyCode.Escape))
-                // {
-                //     PauseGameMenu();
-                // }
-                //
-                // if (Input.GetKeyDown(KeyCode.Tab))
-                // {
-                //     DisplayDungeonOverviewMap();
-                // }
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
+                
+                if (Input.GetKeyDown(KeyCode.Tab))
+                {
+                    DisplayDungeonOverviewMap();
+                }
 
                 break;
 
             // While engaging enemies handle the escape key for the pause menu
-            // case GameState.engagingEnemies:
-            //
-            //     if (Input.GetKeyDown(KeyCode.Escape))
-            //     {
-            //         PauseGameMenu();
-            //     }
-            //
-            //     break;
+            case GameState.engagingEnemies:
+            
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
+                
+                break;
 
 
             // if in the dungeon overview map handle the release of the tab key to clear the map
-            // case GameState.dungeonOverviewMap:
-            //
-            //     // Key released
-            //     if (Input.GetKeyUp(KeyCode.Tab))
-            //     {
-            //         // Clear dungeonOverviewMap
-            //         DungeonMap.Instance.ClearDungeonOverViewMap();
-            //     }
-            //
-            //     break;
+            case GameState.dungeonOverviewMap:
+            
+                // Key released
+                if (Input.GetKeyUp(KeyCode.Tab))
+                {
+                    // Clear dungeonOverviewMap
+                    DungeonMap.Instance.ClearDungeonOverViewMap();
+                }
+            
+                break;
 
             // While playing the level and before the boss is engaged, handle the tab key for the dungeon overview map.
-            // case GameState.bossStage:
-            //
-            //     if (Input.GetKeyDown(KeyCode.Escape))
-            //     {
-            //         PauseGameMenu();
-            //     }
-            //
-            //     if (Input.GetKeyDown(KeyCode.Tab))
-            //     {
-            //         DisplayDungeonOverviewMap();
-            //     }
-            //
-            //     break;
+            case GameState.bossStage:
+            
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
+            
+                if (Input.GetKeyDown(KeyCode.Tab))
+                {
+                    DisplayDungeonOverviewMap();
+                }
+            
+                break;
 
             // While engaging the boss handle the escape key for the pause menu
-            // case GameState.engagingBoss:
-            //
-            //     if (Input.GetKeyDown(KeyCode.Escape))
-            //     {
-            //         PauseGameMenu();
-            //     }
-            //
-            //     break;
+            case GameState.engagingBoss:
+            
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
+            
+                break;
 
             // handle the level being completed
             case GameState.levelCompleted:
@@ -177,16 +184,49 @@ public class GameManager : SingletonMonobehaviour<GameManager>
                 break;
 
             // if the game is paused and the pause menu showing, then pressing escape again will clear the pause menu
-            // case GameState.gamePaused:
-            //     if (Input.GetKeyDown(KeyCode.Escape))
-            //     {
-            //         PauseGameMenu();
-            //     }
-            //     break;
+            case GameState.gamePaused:
+                if (Input.GetKeyDown(KeyCode.Escape))
+                {
+                    PauseGameMenu();
+                }
+                break;
         }
 
     }
-    
+
+    public void PauseGameMenu()
+    {
+        if (gameState != GameState.gamePaused)
+        {
+            pauseMenu.SetActive(true);
+            GetPlayer().playerControl.DisablePlayer();
+
+            // Set game state
+            previousGameState = gameState;
+            gameState = GameState.gamePaused;
+        }
+        else if (gameState == GameState.gamePaused)
+        {
+            pauseMenu.SetActive(false);
+            GetPlayer().playerControl.EnablePlayer();
+
+            // Set game state
+            gameState = previousGameState;
+            previousGameState = GameState.gamePaused;
+
+        }
+    }
+
+    private void DisplayDungeonOverviewMap()
+    {
+        // return if fading
+        if (isFading)
+            return;
+
+        // Display dungeonOverviewMap
+        DungeonMap.Instance.DisplayDungeonOverViewMap();
+    }
+
     private IEnumerator LevelCompleted()
     {
         // Play next level
@@ -227,31 +267,31 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         // Disable player
         GetPlayer().playerControl.DisablePlayer();
         
-        // int rank = HighScoreManager.Instance.GetRank(gameScore);
+        int rank = HighScoreManager.Instance.GetRank(gameScore);
         
-        string rankText = "1";
+        string rankText;
         
         // Test if the score is in the rankings
-        // if (rank > 0 && rank <= Settings.numberOfHighScoresToSave)
-        // {
-        //     rankText = "YOUR SCORE IS RANKED " + rank.ToString("#0") + " IN THE TOP " + Settings.numberOfHighScoresToSave.ToString("#0");
-        //
-        //     string name = GameResources.Instance.currentPlayer.playerName;
-        //
-        //     if (name == "")
-        //     {
-        //         name = playerDetails.playerCharacterName.ToUpper();
-        //     }
-        //
-        //     // Update scores
-        //     HighScoreManager.Instance.AddScore(new Score() { playerName = name, levelDescription = "LEVEL " + (currentDungeonLevelListIndex + 1).ToString() + " - " + GetCurrentDungeonLevel().levelName.ToUpper(), playerScore = gameScore }, rank);
-        //
-        //
-        // }
-        // else
-        // {
-        //     rankText = "YOUR SCORE ISN'T RANKED IN THE TOP " + Settings.numberOfHighScoresToSave.ToString("#0");
-        // }
+        if (rank > 0 && rank <= Settings.numberOfHighScoresToSave)
+        {
+            rankText = "YOUR SCORE IS RANKED " + rank.ToString("#0") + " IN THE TOP " + Settings.numberOfHighScoresToSave.ToString("#0");
+        
+            string name = GameResources.Instance.currentPlayer.playerName;
+        
+            if (name == "")
+            {
+                name = playerDetails.playerCharacterName.ToUpper();
+            }
+        
+            // Update scores
+            HighScoreManager.Instance.AddScore(new Score() { playerName = name, levelDescription = "LEVEL " + (currentDungeonLevelListIndex + 1).ToString() + " - " + GetCurrentDungeonLevel().levelName.ToUpper(), playerScore = gameScore }, rank);
+        
+        
+        }
+        else
+        {
+            rankText = "YOUR SCORE ISN'T RANKED IN THE TOP " + Settings.numberOfHighScoresToSave.ToString("#0");
+        }
 
         // Wait 1 seconds
         yield return new WaitForSeconds(1f);
@@ -278,30 +318,30 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
 
         // // Get rank
-        // int rank = HighScoreManager.Instance.GetRank(gameScore);
-        string rankText = "1";
-        //
-        // // Test if the score is in the rankings
-        // if (rank > 0 && rank <= Settings.numberOfHighScoresToSave)
-        // {
-        //     rankText = "YOUR SCORE IS RANKED " + rank.ToString("#0") + " IN THE TOP " + Settings.numberOfHighScoresToSave.ToString("#0");
-        //
-        //     string name = GameResources.Instance.currentPlayer.playerName;
-        //
-        //     if (name == "")
-        //     {
-        //         name = playerDetails.playerCharacterName.ToUpper();
-        //     }
-        //
-        //     // Update scores
-        //     HighScoreManager.Instance.AddScore(new Score() { playerName = name, levelDescription = "LEVEL " + (currentDungeonLevelListIndex + 1).ToString() + " - " + GetCurrentDungeonLevel().levelName.ToUpper(), playerScore = gameScore }, rank);
-        // }
-        // else
-        // {
-        //     rankText = "YOUR SCORE ISN'T RANKED IN THE TOP " + Settings.numberOfHighScoresToSave.ToString("#0");
-        // }
-        //
-        //
+        int rank = HighScoreManager.Instance.GetRank(gameScore);
+        string rankText;
+        
+        // Test if the score is in the rankings
+        if (rank > 0 && rank <= Settings.numberOfHighScoresToSave)
+        {
+            rankText = "YOUR SCORE IS RANKED " + rank.ToString("#0") + " IN THE TOP " + Settings.numberOfHighScoresToSave.ToString("#0");
+        
+            string name = GameResources.Instance.currentPlayer.playerName;
+        
+            if (name == "")
+            {
+                name = playerDetails.playerCharacterName.ToUpper();
+            }
+        
+            // Update scores
+            HighScoreManager.Instance.AddScore(new Score() { playerName = name, levelDescription = "LEVEL " + (currentDungeonLevelListIndex + 1).ToString() + " - " + GetCurrentDungeonLevel().levelName.ToUpper(), playerScore = gameScore }, rank);
+        }
+        else
+        {
+            rankText = "YOUR SCORE ISN'T RANKED IN THE TOP " + Settings.numberOfHighScoresToSave.ToString("#0");
+        }
+        
+        
         // Wait 1 seconds
         yield return new WaitForSeconds(1f);
         
@@ -328,7 +368,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     
     private void RestartGame()
     {
-        SceneManager.LoadScene("MainGameScene");
+        SceneManager.LoadScene("MainMenuScene");
     }
     
     private void StaticEventHandler_OnRoomEnemiesDefeated(RoomEnemiesDefeatedArgs roomEnemiesDefeatedArgs)
@@ -583,7 +623,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     private void OnValidate()
     {
-        // HelperUtilities.ValidateCheckNullValue(this, nameof(pauseMenu), pauseMenu);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(pauseMenu), pauseMenu);
         HelperUtilities.ValidateCheckNullValue(this, nameof(messageTextTMP), messageTextTMP);
         HelperUtilities.ValidateCheckNullValue(this, nameof(canvasGroup), canvasGroup);
         HelperUtilities.ValidateCheckEnumerableValues(this, nameof(dungeonLevelList), dungeonLevelList);

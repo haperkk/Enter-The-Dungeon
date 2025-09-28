@@ -72,7 +72,31 @@ public class RoomTemplateSO : ScriptableObject
     #endregion Tooltip
 
     public Vector2Int[] spawnPositionArray;
+    
+    #region Header ROOM MUSIC
 
+    [Space(10)]
+    [Header("ROOM MUSIC")]
+
+    #endregion Header ROOM MUSIC
+
+    #region Tooltip
+
+    [Tooltip("The battle music SO when the room hasn't been cleared of enemies")]
+
+    #endregion Tooltip
+
+    public MusicTrackSO battleMusic;
+
+    #region Tooltip
+
+    [Tooltip("Ambient music SO for when the room has been cleared of enemies")]
+
+    #endregion Tooltip
+
+    public MusicTrackSO ambientMusic;
+
+    
     public List<Doorway> GetDoorwayList()
     {
         return doorwayList;
@@ -99,6 +123,8 @@ public class RoomTemplateSO : ScriptableObject
         }
 
         HelperUtilities.ValidateCheckNullValue(this, nameof(prefab), prefab);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(battleMusic), battleMusic);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(ambientMusic), ambientMusic);
         HelperUtilities.ValidateCheckNullValue(this, nameof(roomNodeType), roomNodeType);
         
         // Check enemies and room spawn parameters for levels

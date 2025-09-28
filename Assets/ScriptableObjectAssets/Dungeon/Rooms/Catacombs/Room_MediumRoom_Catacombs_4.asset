@@ -56,6 +56,8 @@ MonoBehaviour:
   - {x: 25, y: 14}
   - {x: 4, y: 26}
   - {x: 19, y: 34}
+  battleMusic: {fileID: 11400000, guid: c75d4084dc3a339479bc78a81acac1c2, type: 2}
+  ambientMusic: {fileID: 11400000, guid: 665cf5751badcc14db344899a6462ad2, type: 2}
   enemiesByLevelList:
   - dungeonLevel: {fileID: 11400000, guid: 36876601cdd7c5d498429195716c3dea, type: 2}
     spawnableObjectRatioList:
